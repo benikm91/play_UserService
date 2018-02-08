@@ -1,0 +1,14 @@
+
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Show help page if user asks for help
+GET     /help                       controllers.HelpController.index
+POST    /signup                     controllers.UserController.signUp
+POST    /login                      controllers.UserController.login
+GET     /login/:name/:password      controllers.UserController.loginGet(name: String, password: String)
+GET     /logout                     controllers.UserController.logout()
+
+GET     /users/current              controllers.UserController.currentUser()
+GET     /users/:id                  controllers.UserController.show(id: Long)

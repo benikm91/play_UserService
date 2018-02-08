@@ -1,0 +1,5 @@
+package models
+
+sealed trait AuthenticationError
+case object UserNotFound extends AuthenticationError
+case object WrongPassword extends AuthenticationError
